@@ -50,8 +50,10 @@
     </style>
 </head>
 <script>
-    let d = new Date();
-    alert("Today's date is " + d);
+   fetch('https://recordvisitapi.azurewebsites.net/api/HttpTrigger1?')
+    .then(response => response.json()) // Parse the JSON from the response
+    .then(data => console.log(data))   // Handle the data
+    .catch(error => console.error('Error:', error));
 </script>
 <body>
 
