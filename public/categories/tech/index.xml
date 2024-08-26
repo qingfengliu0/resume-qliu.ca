@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on My New Hugo Site</title>
+    <link>http://localhost:62252/categories/tech/</link>
+    <description>Recent content in Tech on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:62252/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding Static Site Generators</title>
+      <link>http://localhost:62252/blog/understanding-static-site-generators/</link>
+      <pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:62252/blog/understanding-static-site-generators/</guid>
+      <description>Static site generators (SSGs) are tools that compile templates and content into static HTML files. Unlike traditional dynamic websites that generate pages on the server with each request, static sites are pre-built and served directly to users, which can lead to faster load times and better security.&#xA;What is a Static Site Generator? A static site generator takes content (usually written in Markdown) and templates (often written in HTML) and combines them to generate static HTML files.</description>
+    </item>
+  </channel>
+</rss>

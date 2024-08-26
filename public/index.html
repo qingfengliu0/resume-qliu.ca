@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="generator" content="Hugo 0.133.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=62252&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qingfeng Liu - Resume</title>
@@ -59,17 +60,17 @@
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
             }
-            const data = await response.text(); // Retrieve the response as plain text
-            console.log('Fetched data:', data); // Log the text data
+            const data = await response.text(); 
+            console.log('Fetched data:', data); 
             
-            // Display the text data in the HTML page
+            
             document.getElementById('text-data-container').textContent = data;
         } catch (error) {
             console.error('There has been a problem with your fetch operation:', error);
         }
     }
 
-    fetchData(); // Call the function to fetch and display the data
+    fetchData(); 
 </script>
 <header>
     <h1>Qingfeng Liu</h1>
@@ -87,4 +88,17 @@
         <div id="text-data-container"></div>
     </div>
 </div>
+<div class="container">
+    <section>
+    <h2><a href="/categories/">Blogs Category</a></h2>
+    </section>
+    <section>
+    <h2><a href="/tags/">Blogs Tags</a></h2>
 
+    </section>
+    <div class="section">
+        <p>Static site generators (SSGs) are tools that compile templates and content into static HTML files...</p>
+    </div>
+
+   
+</div>

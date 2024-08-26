@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Techs on My New Hugo Site</title>
+    <link>http://localhost:62252/categories/techs/</link>
+    <description>Recent content in Techs on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:62252/categories/techs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Guide to Web Performance Optimization</title>
+      <link>http://localhost:62252/blog/a-guide-to-web-performance-optimization/</link>
+      <pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:62252/blog/a-guide-to-web-performance-optimization/</guid>
+      <description>Web performance optimization (WPO) is a critical aspect of web development that focuses on improving the speed, responsiveness, and overall user experience of a website. A fast-loading website not only provides a better experience for users but also ranks higher in search engine results.&#xA;Why Web Performance Matters When users visit a website, they expect it to load quickly. Studies have shown that even a one-second delay in page load time can lead to a significant drop in user satisfaction and conversions.</description>
+    </item>
+  </channel>
+</rss>
