@@ -2,43 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:62252/blog/a-guide-to-web-performance-optimization/</loc>
+    <loc>https://resume.qliu.ca/blog/a-guide-to-web-performance-optimization/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62252/blog/</loc>
+    <loc>https://resume.qliu.ca/blog/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62252/categories/</loc>
+    <loc>https://resume.qliu.ca/categories/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62252/tags/hugo/</loc>
+    <loc>https://resume.qliu.ca/tags/hugo/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62252/tags/performance/</loc>
+    <loc>https://resume.qliu.ca/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62252/tags/seo/</loc>
+    <loc>https://resume.qliu.ca/tags/performance/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62252/tags/static-site-generator/</loc>
+    <loc>https://resume.qliu.ca/tags/seo/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62252/tags/</loc>
+    <loc>https://resume.qliu.ca/tags/static-site-generator/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62252/categories/tech/</loc>
+    <loc>https://resume.qliu.ca/tags/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62252/categories/techs/</loc>
+    <loc>https://resume.qliu.ca/categories/tech/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62252/blog/understanding-static-site-generators/</loc>
+    <loc>https://resume.qliu.ca/categories/techs/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62252/tags/web-development/</loc>
+    <loc>https://resume.qliu.ca/blog/understanding-static-site-generators/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62252/</loc>
+    <loc>https://resume.qliu.ca/tags/web-development/</loc>
     <lastmod>2024-08-25T00:00:00+00:00</lastmod>
   </url>
 </urlset>

@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://resume.qliu.ca/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'My Resume Site'
 [taxonomies]
   category = "categories"
   tag = "tags"
