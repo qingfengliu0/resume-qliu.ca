@@ -63,7 +63,7 @@
             console.log('Fetched data:', data); // Log the text data
             
             // Display the text data in the HTML page
-            document.getElementById('text-data-container').innerHTML = data;
+            document.getElementById('text-data-container').textContent = data;
         } catch (error) {
             console.error('There has been a problem with your fetch operation:', error);
         }
