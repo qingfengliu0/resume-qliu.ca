@@ -55,6 +55,10 @@
 <script>
     async function fetchData() {
         try {
+            const currentNumber = localStorage.getItem('currentNumber');
+            if (currentNumber) {
+                document.getElementById('text-data-container').textContent = currentNumber; }
+             
             const response = await fetch('https://recordvisitapi.azurewebsites.net/api/HttpTrigger1?');
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
@@ -64,6 +68,7 @@
             
             // Display the text data in the HTML page
             document.getElementById('text-data-container').textContent = data;
+            localStorage.setItem('currentNumber', data);
         } catch (error) {
             console.error('There has been a problem with your fetch operation:', error);
         }
