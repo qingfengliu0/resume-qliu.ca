@@ -238,6 +238,60 @@
         <p>System Administrator at Blackman Support Services Ltd.</p>
       </header>
 
+      <!-- Embed Existing Hugo Snippet -->
+      <section class="section">
+        <!-- Visitor Counter Script -->
+        <script>
+          async function fetchData() {
+            try {
+              const currentNumber = localStorage.getItem('currentNumber');
+              if (currentNumber) {
+                document.getElementById('text-data-container').textContent = currentNumber;
+              }
+              const response = await fetch('https://recordvisitapi.azurewebsites.net/api/HttpTrigger1?');
+              if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+              }
+              const data = await response.text();
+              document.getElementById('text-data-container').textContent = data;
+              localStorage.setItem('currentNumber', data);
+            } catch (error) {
+              console.error('There has been a problem with your fetch operation:', error);
+            }
+          }
+          fetchData();
+        </script>
+
+        <header>
+          <h2>Qingfeng Liu</h2>
+          <p>System Administrator | DevOps Enthusiast | Cat Lover</p>
+        </header>
+
+        <div class="container">
+          <div class="section">
+            <h3>Contact Information</h3>
+            <p>Email: qingfeng.liu@mimi.ca</p>
+          </div>
+
+          <div class="section">
+            <h3>Visitor Number Count</h3>
+            <div id="text-data-container"></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <section>
+            <h3><a href="/categories/">Blogs Category</a></h3>
+          </section>
+          <section>
+            <h3><a href="/tags/">Blogs Tags</a></h3>
+          </section>
+          <div class="section">
+            <p>Static site generators (SSGs) are tools that compile templates and content into static HTML files...</p>
+          </div>
+        </div>
+      </section>
+
       <!-- Professional Summary Section -->
       <section class="section" id="summary">
         <h2>Professional Summary</h2>
