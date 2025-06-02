@@ -248,7 +248,7 @@
               if (currentNumber) {
                 document.getElementById('text-data-container').textContent = currentNumber;
               }
-              const response = await fetch('https://recordvisitapi.azurewebsites.net/api/HttpTrigger1?');
+              const response = await fetch('https://func-recordvisit-test.azurewebsites.net/api/HttpTrigger1?');
               if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
               }
