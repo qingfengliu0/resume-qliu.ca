@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Qingfeng Liu – Resume</title>
   <style>
-    /* —————— Global Reset & Dark Theme —————— */
+    /* Global Reset */
     * {
       margin: 0;
       padding: 0;
@@ -13,192 +13,140 @@
     }
     html, body {
       height: 100%;
+      background-color: #000; /* black background */
+      color: #fff;            /* white text */
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
       line-height: 1.5;
     }
 
-    /* —————— Visitor Counter Badge —————— */
+    /* Visitor Count Badge */
     #visitor-count {
       position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: rgba(76, 175, 80, 0.85); /* #4CAF50 at 85% opacity */
-      color: #ffffff;
+      top: 16px;
+      right: 16px;
+      background-color: #fff; /* white badge background */
+      color: #000;            /* black text */
       padding: 6px 10px;
       border-radius: 4px;
       font-size: 0.9rem;
       z-index: 1000;
       font-weight: bold;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
     }
 
-    /* —————— Container & Layout —————— */
-    .wrapper {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
+    /* Container Layout */
+    .container {
+      max-width: 800px;
+      margin: 80px auto 40px; /* top margin to avoid badge overlap */
       padding: 20px;
     }
-
-    @media (min-width: 900px) {
-      .wrapper {
-        grid-template-columns: 300px 1fr;
-      }
-    }
-
-    /* —————— Sidebar (Left Column) —————— */
-    .sidebar {
-      background-color: #1f1f1f;
-      border-radius: 8px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .sidebar h2 {
-      font-size: 1.3rem;
-      color: #4CAF50;
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 6px;
-      margin-bottom: 10px;
-    }
-
-    .sidebar .contact-info p,
-    .sidebar .contact-info a {
-      font-size: 0.95rem;
-      color: #c0c0c0;
-    }
-
-    .sidebar .contact-info a:hover {
-      color: #ffffff;
-    }
-
-    .sidebar .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .sidebar .skills-list li {
-      background-color: #121212;
-      border: 1px solid #2a2a2a;
-      border-radius: 4px;
-      padding: 6px 10px;
-      font-size: 0.9rem;
-      color: #e0e0e0;
-      flex: 1 1 100%;
-    }
-    @media (min-width: 500px) {
-      .sidebar .skills-list li {
-        flex: 1 1 calc(50% - 8px);
-      }
-    }
-
-    /* —————— Main Content (Right Column) —————— */
-    .main {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-
     header {
-      background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
-      padding: 40px 20px;
-      border-radius: 8px;
       text-align: center;
-      border: 2px solid #4CAF50;
+      margin-bottom: 40px;
     }
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 6px;
-      color: #ffffff;
+      margin-bottom: 8px;
     }
     header p {
       font-size: 1rem;
-      color: #a0a0a0;
-    }
-    header a {
-      color: #4CAF50;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    header a:hover {
-      color: #ffffff;
+      color: #ccc;
     }
 
+    /* Sections */
     .section {
-      background-color: #1f1f1f;
-      border-radius: 8px;
-      padding: 20px 24px;
-      border: 1px solid #2a2a2a;
+      margin-bottom: 40px;
     }
     .section h2 {
       font-size: 1.7rem;
-      color: #4CAF50;
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 6px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #fff;
+      display: inline-block;
     }
     .section p {
-      font-size: 0.97rem;
-      color: #c0c0c0;
       margin-bottom: 12px;
+      font-size: 0.95rem;
+      color: #ddd;
     }
     .section ul {
       list-style-type: none;
       padding-left: 0;
     }
     .section ul li {
+      margin-bottom: 8px;
+      padding-left: 16px;
       position: relative;
-      padding-left: 20px;
-      margin-bottom: 10px;
-      color: #d0d0d0;
-      font-size: 0.95rem;
     }
     .section ul li:before {
       content: "•";
       position: absolute;
       left: 0;
-      color: #4CAF50;
+      color: #fff;
     }
 
-    .item {
-      margin-bottom: 20px;
+    /* Job Entries */
+    .job {
+      margin-bottom: 24px;
     }
-    .item h3 {
+    .job h3 {
       font-size: 1.2rem;
-      color: #ffffff;
       margin-bottom: 4px;
     }
-    .item .period {
-      font-size: 0.9rem;
-      color: #a0a0a0;
+    .job .period {
       font-style: italic;
-      margin-bottom: 6px;
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
     }
 
-    /* —————— Footer —————— */
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #1f1f1f;
-      border-top: 1px solid #2a2a2a;
-      color: #a0a0a0;
+    /* Certification Card */
+    .cert-card {
+      background-color: #111; /* very dark gray */
+      border: 1px solid #fff;
+      border-radius: 6px;
+      padding: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .cert-details h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .cert-details p {
       font-size: 0.9rem;
-      border-radius: 0 0 8px 8px;
-      margin-top: 20px;
+      color: #ccc;
+      margin-bottom: 4px;
     }
-    footer a {
-      color: #4CAF50;
+    .cert-details a {
+      display: inline-block;
+      margin-top: 4px;
+      color: #fff;
+      background-color: #000;
+      border: 1px solid #fff;
+      padding: 4px 8px;
+      border-radius: 4px;
       text-decoration: none;
+      font-size: 0.9rem;
     }
-    footer a:hover {
-      text-decoration: underline;
+    .cert-details a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Education & Other */
+    .edu-item, .cert-item {
+      margin-bottom: 16px;
+    }
+    .edu-item h4, .cert-item h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .edu-item p, .cert-item p {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 4px;
     }
   </style>
 </head>
@@ -206,156 +154,137 @@
   <!-- Visitor Count Badge -->
   <div id="visitor-count">Visitors: <span id="visitor-number">0</span></div>
 
-  <div class="wrapper">
-    <!-- Sidebar Column -->
-    <aside class="sidebar">
-      <h2>Contact</h2>
-      <div class="contact-info">
-        <p><strong>Email:</strong><br /><a href="mailto:qingfeng.liu@mimi.ca">qingfeng.liu@mimi.ca</a></p>
-        <p><strong>LinkedIn:</strong><br /><a href="https://www.linkedin.com/in/qingfeng-liu-15ab16143/" target="_blank">
-          linkedin.com/in/qingfeng-liu-15ab16143
-        </a></p>
-        <p><strong>Location:</strong><br />British Columbia, Canada </p>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Qingfeng Liu</h1>
+      <p>System Administrator | DevOps Enthusiast</p>
+    </header>
+
+    <!-- Contact Information -->
+    <div class="section contact-info">
+      <h2>Contact Information</h2>
+      <p>Email: <a href="mailto:steven@qliu.ca">steven@qliu.ca</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/qingfeng-liu-15ab16143/" target="_blank">linkedin.com/in/qingfeng-liu-15ab16143</a></p>
+      <p>Location: Victoria, BC, Canada</p>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="section">
+      <h2>Professional Experience</h2>
+
+      <!-- System Administrator, Blackman Support Services Ltd -->
+      <div class="job">
+        <h3>System Administrator</h3>
+        <p class="period">Blackman Support Services Ltd · Permanent Full-time · Feb 2025 – Present (5 mos) · Victoria, BC</p>
+        <ul>
+          <li>Install, configure, and maintain servers, network devices, and applications.</li>
+          <li>Monitor performance and troubleshoot to ensure maximum uptime and reliability.</li>
+          <li>Perform backup routines and implement disaster recovery procedures to protect critical data.</li>
+          <li>Provide technical support to end-users for hardware and software issues.</li>
+          <li>Implement and document security policies, perform regular updates, and apply patches.</li>
+          <li>Evaluate emerging technologies to improve system performance and efficiency.</li>
+        </ul>
       </div>
 
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>Windows Server Administration</li>
-        <li>Linux Server Management</li>
-        <li>Terraform &amp; Ansible (IaC)</li>
-        <li>CI/CD (Jenkins, GitHub Actions)</li>
-        <li>Networking &amp; VPN Troubleshooting</li>
-        <li>Azure Cloud Automation</li>
-        <li>PowerShell &amp; Bash Scripting</li>
+      <!-- Junior System Administrator, Blackman Support Services Ltd -->
+      <div class="job">
+        <h3>Junior System Administrator</h3>
+        <p class="period">Blackman Support Services Ltd · Permanent Full-time · Feb 2024 – Feb 2025 (1 yr 1 mo) · Victoria, BC (On-site)</p>
+        <ul>
+          <li>Assisted with installation, configuration, and maintenance of servers and network hardware.</li>
+          <li>Monitored system health and addressed issues to maintain optimal reliability.</li>
+          <li>Performed regular system backups and helped implement recovery plans.</li>
+          <li>Provided Tier 2 support to resolve hardware and software-related problems.</li>
+          <li>Collaborated on security policy enforcement and patch management.</li>
+          <li>Documented configurations, procedures, and troubleshooting steps for future reference.</li>
+        </ul>
+      </div>
+
+      <!-- Tier 2 Support Technician -->
+      <div class="job">
+        <h3>Tier 2 Support Technician</h3>
+        <p class="period">Aug 2022 – Mar 2024 (1 yr 8 mos)</p>
+        <ul>
+          <li>Provided remote and on-site Tier 2 support for hardware and software issues.</li>
+          <li>Logged and documented work in ticketing system to maintain accurate records.</li>
+          <li>Performed scheduled maintenance on IT systems to prevent downtime.</li>
+          <li>Tracked equipment, software licenses, and time allocations for billing processes.</li>
+        </ul>
+      </div>
+
+      <!-- Computer Technician, DTI Computers Inc. -->
+      <div class="job">
+        <h3>Computer Technician</h3>
+        <p class="period">DTI Computers Inc. · Permanent Full-time · Feb 2021 – Jul 2022 (1 yr 6 mos) · Victoria, BC, Canada</p>
+        <ul>
+          <li>Diagnosed and resolved technical issues for end-users, both in-person and remotely.</li>
+          <li>Managed inventory, sales, and recycling of hardware according to company policies.</li>
+          <li>Maintained client database, updating customer information as needed.</li>
+          <li>Researched solutions using technical manuals and user guides.</li>
+          <li>Provided user training and documented all support activities.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section">
+      <h2>Projects & DevOps Work</h2>
+      <ul>
+        <li>GitHub Repositories: <a href="https://github.com/qingfengliu0" target="_blank">github.com/qingfengliu0</a></li>
+        <li>Infrastructure as Code: Wrote Terraform modules for Azure resource provisioning and automation.</li>
+        <li>Ansible Automation: Developed playbooks to automate server configuration, patching, and health checks.</li>
+        <li>Atlantis Integration: Configured Atlantis for collaborative Terraform pull request workflows on GitHub.</li>
+        <li>DevOps Tooling: Built CI/CD pipelines using Jenkins and GitHub Actions to streamline application deployments.</li>
       </ul>
-    </aside>
+    </div>
 
-    <!-- Main Content Column -->
-    <main class="main">
-      <!-- Header Section -->
-      <header>
-        <h1>Qingfeng Liu</h1>
-        <p>System Administrator at Blackman Support Services Ltd.</p>
-      </header>
+    <!-- Education -->
+    <div class="section">
+      <h2>Education</h2>
+      <div class="edu-item">
+        <h4>University of Victoria</h4>
+        <p>Bachelor of Science (BSc), Mathematics and Computer Science · Sep 2016 – May 2020</p>
+      </div>
+    </div>
 
-      <!-- Embed Existing Hugo Snippet -->
-      <section class="section">
+    <!-- Certifications Section -->
+    <div class="section">
+      <h2>Certifications</h2>
 
-        <header>
-          <h2>Qingfeng Liu</h2>
-          <p>System Administrator | DevOps Enthusiast | Cat Lover</p>
-        </header>
-
-        <div class="container">
-          <div class="section">
-            <h3>Contact Information</h3>
-            <p>Email: qingfeng.liu@mimi.ca</p>
-          </div>
+      <!-- CCNA -->
+      <div class="cert-card">
+        <div class="cert-details">
+          <h4>Cisco Certified Network Associate (CCNA)</h4>
+          <p>Issued: Jun 2024 · Expires: Jun 2027</p>
+          <p>Credential ID: 473190436</p>
+          <a href="https://www.credly.com/badges/473190436" target="_blank">Show Credential</a>
         </div>
+      </div>
 
-        <div class="container">
-          <section>
-            <h3><a href="/categories/">Blogs Category</a></h3>
-          </section>
-          <section>
-            <h3><a href="/tags/">Blogs Tags</a></h3>
-          </section>
-          <div class="section">
-            <p>Static site generators (SSGs) are tools that compile templates and content into static HTML files...</p>
-          </div>
+      <!-- CompTIA Security+ -->
+      <div class="cert-card">
+        <div class="cert-details">
+          <h4>CompTIA Security+</h4>
+          <p>Issued: Jan 2021 · Expires: Jan 2027</p>
+          <p>Credential ID: F5REJR4HTGBE1W9G</p>
+          <a href="https://verify.comptia.org/F5REJR4HTGBE1W9G" target="_blank">Show Credential</a>
         </div>
-      </section>
+      </div>
 
-      <!-- Professional Summary Section -->
-      <section class="section" id="summary">
-        <h2>Professional Summary</h2>
-        <p>
-          Experienced System Administrator with over 7 years managing Windows and Linux servers in on-premises and cloud environments.  
-          Passionate about DevOps – Infrastructure as Code, CI/CD pipelines, and automating repetitive tasks. Proven ability to design, deploy,  
-          and secure enterprise systems while collaborating cross-functionally to align IT solutions with business goals.  
-          (Full details on LinkedIn – please visit the profile.) 
-        </p>
-      </section>
-
-      <!-- Professional Experience Section -->
-      <section class="section" id="experience">
-        <h2>Professional Experience</h2>
-
-        <div class="item">
-          <h3>System Administrator</h3>
-          <p class="period">Blackman Support Services Ltd. | Victoria, BC</p>
-          <p class="period">(Dates &amp; responsibilities on LinkedIn) </p>
-          <ul>
-            <li>
-              Administer Windows and Linux servers, configure Active Directory, Group Policy, DHCP, DNS, and firewall rules.  
-              
-            </li>
-            <li>
-              Collaborate with DevOps teams to automate infrastructure: Terraform, Ansible, CI/CD pipelines.  
-              
-            </li>
-          </ul>
+      <!-- CompTIA A+ -->
+      <div class="cert-card">
+        <div class="cert-details">
+          <h4>CompTIA A+</h4>
+          <p>Issued: Jun 2020 · Expires: Jan 2027</p>
+          <p>Credential ID: CC0XLJRNYG11Q6GE</p>
+          <a href="https://verify.comptia.org/CC0XLJRNYG11Q6GE" target="_blank">Show Credential</a>
         </div>
-
-        <div class="item">
-          <h3>Previous System Administrator Roles</h3>
-          <p class="period">(Full timeline and details available on LinkedIn) </p>
-          <ul>
-            <li>Pacific Digestive Health – Managed Windows Server 2012/2016, Veeam backups, Cisco ASA firewalls. </li>
-            <li>Broadmead Care Society – Tier 2 support, SMTP troubleshooting, SQL Server performance tuning. </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Education Section -->
-      <section class="section" id="education">
-        <h2>Education</h2>
-        <p>(Educational background listed on LinkedIn)</p>
-        <ul>
-          <li>Post-Graduate Diploma in Information Systems Management, Royal Roads University </li>
-          <li>Bachelor of Science in Computer Science, University of Victoria </li>
-        </ul>
-      </section>
-
-      <!-- Certifications Section -->
-      <section class="section" id="certifications">
-        <h2>Certifications</h2>
-        <p>(Certifications detailed on LinkedIn)</p>
-        <ul>
-          <li>Azure Administrator Associate (Microsoft Certified) </li>
-          <li>Red Hat Certified System Administrator (RHCSA) </li>
-          <li>Certified Kubernetes Administrator (CKA) </li>
-          <li>CompTIA Security+ </li>
-        </ul>
-      </section>
-    </main>
+      </div>
+    </div>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Qingfeng Liu. All rights reserved.
-  </footer>
-      <script>
-          async function fetchData() {
-            try {
-              const currentNumber = localStorage.getItem('currentNumber');
-              if (currentNumber) {
-                document.getElementById('visitor-number').textContent = currentNumber;
-              }
-              const response = await fetch('https://func-recordvisit-test.azurewebsites.net/api/HttpTrigger1?');
-              if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-              }
-              const data = await response.text();
-              document.getElementById('visitor-number').textContent = data;
-              localStorage.setItem('currentNumber', data);
-            } catch (error) {
-              console.error('There has been a problem with your fetch operation:', error);
-            }
-          }
-          fetchData();
-        </script>
-  <!-- —————— Visitor Count Script —————— -->
+  <!-- Visitor Count Script -->
   <script>
     async function updateVisitorCount() {
       try {
@@ -370,6 +299,7 @@
         const data = await response.text();
         document.getElementById('visitor-number').textContent = data;
         localStorage.setItem('visitorCount', data);
+        document.getElementById('text-data-container').textContent = data;
       } catch (err) {
         console.error('Error fetching visitor count:', err);
       }
@@ -378,3 +308,4 @@
   </script>
 </body>
 </html>
+
