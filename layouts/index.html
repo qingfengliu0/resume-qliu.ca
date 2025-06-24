@@ -299,7 +299,6 @@
         const data = await response.text();
         document.getElementById('visitor-number').textContent = data;
         localStorage.setItem('visitorCount', data);
-        document.getElementById('text-data-container').textContent = data;
       } catch (err) {
         console.error('Error fetching visitor count:', err);
       }

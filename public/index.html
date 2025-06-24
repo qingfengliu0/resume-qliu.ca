@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.147.6">
+	<meta name="generator" content="Hugo 0.147.9">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Qingfeng Liu – Resume</title>
@@ -300,7 +300,6 @@
         const data = await response.text();
         document.getElementById('visitor-number').textContent = data;
         localStorage.setItem('visitorCount', data);
-        document.getElementById('text-data-container').textContent = data;
       } catch (err) {
         console.error('Error fetching visitor count:', err);
       }
