@@ -3,7 +3,7 @@ name: Upload to CDN web storage
 on:
   push:
     branches:
-      - main
+      - test
 
 jobs:
   upload_to_blob:
