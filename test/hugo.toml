@@ -1,0 +1,9 @@
+baseURL = 'https://resumetest.qliu.ca/'
+languageCode = 'en-us'
+title = 'My Resume Site'
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[permalinks]
+  blog = "/blog/:slug/"

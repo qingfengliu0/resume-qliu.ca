@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts in {{ .Title }} Category</title>
+</head>
+<body>
+    <header>
+        <h1>Posts in the "{{ .Title }}" Category</h1>
+    </header>
+
+    <main>
+        <ul>
+            {{ range .Pages }}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <p>{{ .Summary }}</p>
+            </li>
+            {{ end }}
+        </ul>
+    </main>
+
+    <footer>
+        <p>Category page for {{ .Title }}</p>
+    </footer>
+</body>
+</html>
