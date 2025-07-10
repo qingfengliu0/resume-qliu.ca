@@ -2,6 +2,8 @@ name: Upload to CDN web storage
 
 on:
   push:
+    paths:
+      - 'prod/**'  
     branches:
       - main
 

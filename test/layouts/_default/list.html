@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+</head>
+<body>
+    <h1>{{ .Title }}</h1>
+
+    {{ if .IsHome }}
+        <p>This is the homepage list.</p>
+
+    {{ else if eq .Kind "taxonomy" }}
+        <p>List of terms in the {{ .Title }} taxonomy.</p>
+        <ul>
+            {{ range .Data.Terms }}
+            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+            {{ end }}
+        </ul>
+
+    {{ else if eq .Kind "taxonomyTerm" }}
+        <p>List of content under the "{{ .Title }}" taxonomy term.</p>
+        <ul>
+            {{ range .Pages }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+
+    {{ else }}
+        <p>List of regular pages.</p>
+        <ul>
+            {{ range .Pages }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    {{ end }}
+
+</body>
+</html>

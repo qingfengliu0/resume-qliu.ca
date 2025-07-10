@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tags</title>
+</head>
+<body>
+    <h1>Tags</h1>
+    <ul>
+        {{ range .Terms }}
+        <li>
+            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }} posts)
+        </li>
+        {{ end }}
+    </ul>
+</body>
+</html>
