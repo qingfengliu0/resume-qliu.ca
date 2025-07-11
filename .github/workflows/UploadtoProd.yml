@@ -24,7 +24,7 @@ jobs:
       - name: Upload file to Blob Storage
         run: |
           echo "Uploading files to Blob Storage"
-          az storage blob upload-batch --destination ${{ secrets.AZURE_CONTAINER_NAME_PROD }} --source ./prod/public --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME_PROD }} --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY_PROD }} --overwrite
+          az storage blob upload-batch --destination ${{ secrets.AZURE_CONTAINER_NAME_PROD }} --source ./prod/ --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME_PROD }} --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY_PROD }} --overwrite
 
       - name: Clean up local files
         run: |
